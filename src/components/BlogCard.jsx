@@ -4,7 +4,7 @@ import Spinner from "./common/Spinner";
 
 function BlogCard({ blogs }) {
   if (!blogs.isSuccess)
-    return <p className=" mt-5 text-xl font-semibold">No content</p>;
+    return <p className=" mt-5 text-xl font-semibold">Loading</p>;
   return (
     blogs.isSuccess &&
     blogs.data.map((blog) => (

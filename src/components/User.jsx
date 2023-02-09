@@ -24,7 +24,7 @@ function User({ currentUser }) {
         <input
           className=" border  border-slate-400 w-full px-2 py-3 rounded-sm"
           type="text"
-          value={currentUser && currentUser.name}
+          value={currentUser && currentUser.data.name}
         />
       </div>
       <div className="mb-4">
@@ -32,7 +32,7 @@ function User({ currentUser }) {
           disabled={true}
           className="  border border-slate-400 w-full px-2 py-3 rounded-sm"
           type="email"
-          value={currentUser && currentUser.email}
+          value={currentUser && currentUser.data.email}
         />
       </div>
 

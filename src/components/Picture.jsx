@@ -5,7 +5,7 @@ function Picture({ currentUser }) {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    Object.keys(currentUser) == 0 ? setLoading(true) : setLoading(false);
+    Object.keys(currentUser.data) == 0 ? setLoading(true) : setLoading(false);
   }, [currentUser]);
 
   if (loading) return <Spinner loading={loading} />;
@@ -13,7 +13,11 @@ function Picture({ currentUser }) {
     <div className=" flex justify-start items-center h-fit">
       <img
         className=" rounded-full w-1/6"
-        src={currentUser && currentUser.profile ? currentUser.profile.url : ""}
+        src={
+          currentUser && currentUser.data.profile
+            ? currentUser.data.profile.url
+            : ""
+        }
         alt=""
       />
     </div>
